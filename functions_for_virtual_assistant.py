@@ -3,16 +3,19 @@ import pyttsx3
 import webbrowser
 
 def menu_assistant():
-    speak("Bienvenue dans le programme d'assistance virtuelle")
-    speak("Tapez 1 pour lire des vidéos")
-    speak("Tapez 2 pour lire des fichiers")
-    speak("Tapez 3 pour des questions")
-    ecouter=int(listen())
-    if ecouter==1:
-        speak("Programme d'assistance de lecture des vidéos")
-        ecouter_la_musique()
-    else:
-        speak("Commande invalide, veuillez recommencer")
+    while True:
+        speak("Bienvenue dans le programme d'assistance virtuelle")
+        speak("Tapez 1 pour lire des vidéos")
+        speak("Tapez 2 pour quitter")
+        ecouter=int(listen())
+        if ecouter==1:
+            speak("Programme d'assistance de lecture des vidéos")
+            ecouter_la_musique()
+        elif ecouter==2:
+            speak("Fermeture du programme encours..")
+            break
+        else:
+            speak("Commande invalide, veuillez recommencer")
 # Function to recognize speech
 def listen():
     with sr.Microphone() as source:
