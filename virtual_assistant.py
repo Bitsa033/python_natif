@@ -16,9 +16,9 @@ def listen():
         # recognizer.adjust_for_ambient_noise(source)
         try:
             print("Je vous écoute...")
-            audio = recognizer.listen(source)
-            query = recognizer.recognize_google(audio,language='fr-FR')
-            # query=input('entrer votre message: ')
+            # audio = recognizer.listen(source)
+            # query = recognizer.recognize_google(audio,language='fr-FR')
+            query=input('entrer votre message: ')
             print("Message:", query)
             return query
                 
