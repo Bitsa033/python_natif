@@ -5,11 +5,11 @@ import webbrowser
 def menu_assistant():
     while True:
         speak("Bienvenue dans le programme d'assistance virtuelle")
-        speak("Tapez 1 pour lire des vidéos")
+        speak("Tapez 1 pour communiquer avec moi")
         speak("Tapez 2 pour quitter")
         ecouter=int(listen())
         if ecouter==1:
-            speak("Programme d'assistance de lecture des vidéos")
+            speak("Programme d'assistance de communication virtuelle")
             ecouter_la_musique()
         elif ecouter==2:
             speak("Fermeture du programme encours..")
